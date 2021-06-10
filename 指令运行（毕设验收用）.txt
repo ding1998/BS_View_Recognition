@@ -1,0 +1,22 @@
+进入anaconda环境BS
+   activate BS
+
+进入程序目录
+   cd F:\BS\yolo_tf2.1\yolo_tf2.1
+
+图片感知
+  python detect.py  --classes  ./data/fire_voc2012.names  --num_classes 1 --weights ./checkpoints/yolov3_train_20.tf  --image ./fire.jpg  --yolo_score_threshold 0.3
+
+视觉感知
+  python detect_video.py --video fire.mp4 --output ./test_output.avi   --yolo_score_threshold 0.3
+  
+（感知准确率需要2倍）
+
+查看训练日志
+训练的日志：tensorboard --logdir=logs/train
+验证的日志：tensorboard --logdir=logs/validation
+
+
+
+
+
